@@ -32,8 +32,27 @@ fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=
         if (arrayOfResturants.length < 3) {
             alert("Please try another query.")
         }
+        arrayOfResturants.forEach(element => {
+
+            let html = `
+                <h2>${element.names}</h2>
+                <h3>Type: ${element.types}</h3>
+                <p> Cost: $${element.costs} for two people  Rating: ${element.ratings}  Location: ${element.locations}</p>
+            `
+        document.getElementById("putHere"). innerHTML += html
+        
+        })
     })
 
 
 
 
+// arrayOfResturants.forEach(element => {
+
+//     let html = `
+//         <h1>${element.names}</h1>
+//         <h2>Type: ${element.types}</h2>
+//     `
+// document.getElementById("putHere"). innerHTML += html
+
+// })
