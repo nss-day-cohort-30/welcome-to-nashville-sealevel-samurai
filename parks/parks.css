@@ -1,5 +1,12 @@
+/* Dropdown */
+
+.dropdownChecklist, .parkFeatures {
+    font-size: 1.4em;
+}
+
 .dropdownChecklist {
     display: inline-block;
+    /* position: absolute; */
 }
 
 .dropdownChecklist .anchor {
@@ -48,4 +55,29 @@
 
 .dropdownChecklist.visible .items {
     display: block;
+    position: absolute;
+    background-color: rgb(221, 221, 221);
+}
+
+#searchButton {
+    height: 50px;
+    width: 50%;
+    background-color: black;
+    color: white;
+}
+
+
+/* results box */
+#parksThatMatch {
+    border: 2px solid black;
+    max-height: 500px;
+    max-width: 900px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+.matchingPark {
+    border: 1px solid red;
 }
