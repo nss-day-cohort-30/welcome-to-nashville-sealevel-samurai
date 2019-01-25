@@ -12,7 +12,7 @@
         let el = document.getElementById("putHere")
         el.innerHTML = ""
     
-    fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&apikey=a5b9a73d046e9d6841fc6862a427d076&q=${foodType}&sort=rating
+    fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&apikey=a5b9a73d046e9d6841fc6862a427d076&q=${foodType}
     `)
         .then(response => response.json())
         .then(restInfo => {
@@ -23,6 +23,16 @@
                 let cost = restInfo.restaurants[i].restaurant.average_cost_for_two;
                 let location = restInfo.restaurants[i].restaurant.location.locality
                 let rating = restInfo.restaurants[i].restaurant.user_rating.aggregate_rating
+
+
+                html = `
+                <div>
+                <h2>${name}</h2>
+                <h3>Type: ${type}</h3>
+                <p> Cost: $${cost} for two people  Rating: ${rating}  Location: ${location}</p>
+                </div>
+            `
+                el.innerHTML += html
                 let blankRestObject = {}
     
                 blankRestObject.names = name
@@ -37,21 +47,9 @@
             if (arrayOfResturants.length < 3) {
                 alert("Please try another query.")
             } 
-            arrayOfResturants.forEach(element => {
-    
-                html = `
-                    <div>
-                    <h2>${element.names}</h2>
-                    <h3>Type: ${element.types}</h3>
-                    <p> Cost: $${element.costs} for two people  Rating: ${element.ratings}  Location: ${element.locations}</p>
-                    </div>
-                `
-                el.innerHTML += html
-                
-            })
-
-            arrayOfResturants = []    
             
+       
+            arrayOfResturants = []
         
         })
     }
