@@ -1,32 +1,34 @@
+//create an empy array for results
 let results = []
-const eventUrl ="https://www.eventbriteapi.com/v3/events/search/?location.address=nashville&location.within=50mi&categories="
-const eventToken ="&token=LSMF733OV2VR6EEC2LEY"
+//breaks the url down for custom search
+const eventUrl = "https://www.eventbriteapi.com/v3/events/search/?location.address=nashville&location.within=50mi&q="
+const eventToken = "&token=LSMF733OV2VR6EEC2LEY"
 let myUrlSearch = ""
-let makeUrl = eventUrl.concat(myUrlSearch).concat(eventToken) 
+//gets the custom search
 let getSearchTerms = () => {
-   myUrlSearch = document.getElementById("searchTerms").value
-   console.log(myUrlSearch)
-   fetch(makeUrl)
-   .then(response => response.json)
-   .then(results.push(myUrlSearch))
-   .then(addHtmlToDom(myUrlSearch ))
-   
+    myUrlSearch = document.getElementById("searchTerms").value
+    console.log(myUrlSearch)
+    //gets the api
+    let makeUrl = eventUrl.concat(myUrlSearch).concat(eventToken)
+    fetch(makeUrl)
+        .then(response => response.json())
+        .then(results => {console.log(results)})
+        // .push(myUrlSearch))
+        // .then(addHtmlToDom(myUrlSearch))
+        // .then(console.log(makeUrl))
+
 }
- console.log(results)
-
- let htmlBuilder = (myUrlSearch) =>  {
- return `
-
- <p>${myUrlSearch.name}<p>
+console.log(results)
+//builds the html
+let htmlBuilder = (results) => {
+    return `
+ <p>${results.name}<p>
+ `}
  
- `}      
- 
- const addHtmlToDom = (htmlElement) => {
-     document.querySelector("#apiResults").innerHTML += htmlElement
-    }
-    
-    
-    
+//adds html to dom
+const addHtmlToDom = (htmlElement) => {
+    document.querySelector("#apiResults").innerHTML += htmlElement
+}
 
- document.getElementById("input").addEventListener("click", getSearchTerms, addHtmlToDom)
-    
+//listens for the button
+document.getElementById("input").addEventListener("click", getSearchTerms)
