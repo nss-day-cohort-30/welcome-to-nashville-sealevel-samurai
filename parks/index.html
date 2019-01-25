@@ -12,8 +12,8 @@
 <body>
     <h1>PARKS PRACTICE</h1>
 
-    <div id="" class="" tabindex="">
-        <span class="anchor">--Select desired park features:--</span>
+    <div id="parkFeaturesList" class="dropdownChecklist" tabindex="">
+        <span class="anchor">--Select desired park features: --</span>
         <ul class="items">
             <li>
                 <input id="community_center" class="parkFeature" type="checkbox" />Community Center
@@ -99,10 +99,10 @@
             <li>
                 <input id="community_garden" class="parkFeature" type="checkbox" />Community Garden
             </li>
+            <div><button id="searchButton">Add Filters</button></div>
         </ul>
     </div>
-
-    <div><button id="searchButton">Submit</button></div>
+    
 
     <div>
         <section id="parksThatMatch">
