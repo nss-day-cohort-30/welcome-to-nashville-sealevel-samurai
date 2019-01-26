@@ -1,15 +1,16 @@
 /* Dropdown */
 
-.dropdownChecklist, .parkFeatures {
+.parksDropdownChecklist, .parkFeatures {
     font-size: 1.4em;
 }
 
-.dropdownChecklist {
+.parksDropdownChecklist {
     display: inline-block;
     /* position: absolute; */
+    background-color: rgb(0, 217, 255);
 }
 
-.dropdownChecklist .anchor {
+.parksDropdownChecklist .anchor {
     position: relative;
     cursor: pointer;
     display: inline-block;
@@ -17,11 +18,11 @@
     border: 1px solid #ccc;
 }
 
-.dropdownChecklist .anchor:after {
+.parksDropdownChecklist .anchor:after {
     position: absolute;
     content: "";
-    border-left: 2px solid black;
-    border-top: 2px solid black;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
     padding: 5px;
     right: 10px;
     top: 20%;
@@ -32,52 +33,42 @@
     transform: rotate(-135deg);
 }
 
-.dropdownChecklist .anchor:active:after {
+.parksDropdownChecklist .anchor:active:after {
     right: 8px;
     top: 21%;
 }
 
-.dropdownChecklist ul.items {
+.parksDropdownChecklist ul.items {
     padding: 2px;
     display: none;
     margin: 0;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(0, 217, 255);
     border-top: none;
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.dropdownChecklist ul.items li {
+.parksDropdownChecklist ul.items li {
     list-style: none;
 }
 
-.dropdownChecklist.visible .anchor {
-    color: #0094ff;
-}
-
-.dropdownChecklist.visible .items {
-    display: block;
-    position: absolute;
-    background-color: rgb(221, 221, 221);
-}
-
-#searchButton {
-    height: 50px;
-    width: 50%;
-    background-color: black;
+.parksDropdownChecklist.visible .anchor {
     color: white;
 }
 
-
-/* results box */
-#parksThatMatch {
-    border: 2px solid black;
-    max-height: 500px;
-    max-width: 900px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-
+.parksDropdownChecklist.visible .items {
+    display: block;
+    position: absolute;
+    background-color: rgb(0, 217, 255);
 }
 
-.matchingPark {
-    border: 1px solid red;
+#parkSearchButton {
+    font-size: .9em;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(0, 217, 255);
+    color: white;
+    font-size: 1.7em;
 }
+

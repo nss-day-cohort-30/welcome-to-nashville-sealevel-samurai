@@ -54,7 +54,7 @@ searchParksAPI = function () {
         })
 }
 
-document.querySelector("#searchButton").addEventListener("click", searchParksAPI)
+document.querySelector("#parkSearchButton").addEventListener("click", searchParksAPI)
 
 // Defines the dropdown list as dropdown
 let dropdown = document.querySelector("#parkFeaturesList");
