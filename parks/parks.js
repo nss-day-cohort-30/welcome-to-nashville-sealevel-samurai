@@ -39,7 +39,8 @@ searchParksAPI = function () {
             } else {
                 parsedParks.forEach(park => {
                     let parkName = park.park_name;
-                    let parkAddress = `${park.mapped_location_address}, ${park.mapped_location_city}, ${park.mapped_location_state}, ${park.mapped_location_zip}`;
+                    let parkAddress = `${park.mapped_location_address}, ${park.mapped_location_city}, ${park.mapped_location_state}
+                    `;
                     parksThatMatch.innerHTML += `
                         <article id="${parkName}" class="matchingPark">
                             <h2 id="${parkName}-header" class="matchingParkHeader">${parkName}</h2>
@@ -65,3 +66,31 @@ executeDropdown = function () {
 // Adds executeDropdown to "select desired features" bar
 document.querySelector(".anchor").addEventListener("click", executeDropdown)
 
+
+
+saveParkToItinerary = function (event) {
+    // checks to make sure a seave button is clicked
+    if(event.target.id.startsWith("save")) {
+        // Clears out any pre-existing parks in the saved itinerary:
+        let itineraryPark = document.querySelector("#savedParkDiv")
+        if (itineraryPark.textContent !== "") {
+            itineraryPark.textContent = "";
+        }
+        // makes a copy of a node. I'm working with the node because I'm having difficulty querySelecting elemnts with spaces in the id name, which some of the tags generated with park names have spaces in the id. 
+        // copying the parent node so it doesnt get moved out of the results list
+        let parkNode = event.target.parentNode.cloneNode(true);
+        // making a list of the child nodes so I can select just the name and address
+        let parkNodeList = parkNode.childNodes;
+        let itineraryParkHTML = `
+        <h2>${parkNodeList[1].textContent}</h2>
+        <div>${parkNodeList[3].textContent}</div>
+        `
+        document.querySelector("#savedParkDiv").innerHTML = itineraryParkHTML;
+
+
+
+
+    }
+}
+
+document.querySelector("#parksThatMatch").addEventListener("click", saveParkToItinerary)
