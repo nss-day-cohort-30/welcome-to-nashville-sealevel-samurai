@@ -1,3 +1,14 @@
+#Download Instructions
+
+To download this app, clone or download the repository using the green button on the upeer right corner. 
+
+#Run Instructions 
+
+Run the app in the browser after starting the http-server in the directory of the application. 
+
+The app asks the user to search for things to do in Nashville using a drop-down menu for parks and concerts, and a keyword search for restuarants and meetups. Submit buttons to the right of each catergory are used to populate the matching results of each catergory's search. The user can add different things to do per catergory by selecting the corresponding "save" button listed for each item in the catergory search results boxes. These are then added to the itinerary for the user at the bottom. At any point, the intitial search for catergories can be changed as well as the individual selections for the itinerary. Finally, the final itinerary can be saved to a pdf document using the "Generate PDF PrintOut" button.
+
+
 # Welcome to Nashville: Build an itinerary for a day trip to Music City
 
 In this app users can search for four different things to do/visit in Nashville:
@@ -58,3 +69,5 @@ To start you off, here's an example of what the itinerary in your API might look
 * Add an affordance to finalize an itinerary, and start a new one.
   * Add ability to view one or all of the itineraries
 * Instead of displaying all the search fields, search results, and itinerary list at the same time, add a nav bar or other feature(s) for hiding/showing what the user wants to view
+
+
