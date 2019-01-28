@@ -18,10 +18,14 @@ let getSearchTerms = () => {
             // console.log(typeof meetUps)
             meetUps.forEach(meetUp => {
                 let name = meetUp.name.text
+                let url = meetUp.url
                 console.log(name)
-            let htmlBuilder = apiResults.innerHTML +=
+            let htmlBuilder = meetUpsThatWork.innerHTML +=
                     `
-                    <p>${name}<p>
+                    <div>
+                    <a href=${url}>${name}</a>
+                    <button id="save-${url}">Save Event</button>
+                    </div>
                     `
                     
                     // console.log(results.name)
@@ -39,8 +43,9 @@ let getSearchTerms = () => {
 
 //adds html to dom
 const addHtmlToDom = (htmlBuilder) => {
-    document.querySelector("#apiResults").innerHTML += htmlElement
+    document.querySelector("#meetUpsThatWork").innerHTML += htmlElement
 }
 
 //listens for the button
 document.getElementById("input").addEventListener("click", getSearchTerms)
+
