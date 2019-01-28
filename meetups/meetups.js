@@ -7,26 +7,38 @@ let myUrlSearch = ""
 //gets the custom search
 let getSearchTerms = () => {
     myUrlSearch = document.getElementById("searchTerms").value
-    console.log(myUrlSearch)
+    
     //gets the api
     let makeUrl = eventUrl.concat(myUrlSearch).concat(eventToken)
     fetch(makeUrl)
         .then(response => response.json())
-        .then(results => {console.log(results)})
+        .then(results => {
+            console.log(results.events)
+            let meetUps = results.events
+            console.log(typeof meetUps)
+            meetUps.forEach(meetUp => {
+                let name = meetUp.name.text
+                console.log(name)
+                let htmlBuilder = () => {
+                    return `
+                    <p>${results.events.name.text}<p>
+                    `}
+                    
+                    console.log(results.name)
+        });})
+
+
+
         // .push(myUrlSearch))
         // .then(addHtmlToDom(myUrlSearch))
         // .then(console.log(makeUrl))
 
 }
-console.log(results)
+// console.log(results)
 //builds the html
-let htmlBuilder = (results) => {
-    return `
- <p>${results.name}<p>
- `}
- 
+
 //adds html to dom
-const addHtmlToDom = (htmlElement) => {
+const addHtmlToDom = (htmlBuilder) => {
     document.querySelector("#apiResults").innerHTML += htmlElement
 }
 
