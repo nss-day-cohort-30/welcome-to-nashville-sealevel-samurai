@@ -1,0 +1,140 @@
+@import url("hero.css");
+@import url("parks/parks.css");
+@import url("concerts/concerts.css");
+
+* {
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    /* border: 1px solid black; */
+    min-width: 1000px;
+    max-Width: 1500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+
+/****************** Main body below hero header */
+
+/* Instructions Section */
+#instructions {
+    /* border: 3px dotted goldenrod; */
+    margin: 20px 0px 20px 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* Search Fields Sections */
+.searchField {
+    /* border: 1px dotted black; */
+    height: 50px;
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: bold;
+}
+
+.searchSectionHeader {
+    font-size: 2em;
+}
+
+
+
+/* Search Results Sections */
+#searchResultsFields {
+    /* border: 2px solid purple; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 10px 0px 0px 0px
+}
+.resultsField {
+    /* border: 3px dotted rgb(236, 76, 1); */
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 48%;
+    margin: 5px 0px;
+}
+
+.resultsSectionHeader {
+    color: white;
+    font-size: 2em;
+}
+
+.resultsList {
+    /* border: 1px dashed red; */
+    max-height: 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: white;
+}
+.resultsList button{
+    background-color: rgb(0, 217, 255);
+    color: white;
+    font-weight: bold;
+}
+.resultsList article {
+    margin: 10px 0px;
+}
+
+
+
+
+/* Itinerary Section */
+#savedItinerary {
+    /* border: 1px solid red; */
+    font-weight: bold;
+    margin: 10px 0px 120px 0px;
+}
+#savedItinerary {
+    color: rgb(236, 76, 1);
+    font-size: 3em;
+}
+
+.savedItem{
+    color: rgb(236, 76, 1);
+}
+
+.savedItemDiv, .savedItemDiv h2 {
+    color: white;
+    font-size: 1em;
+}
+
+
+
+
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    width: 100%;
+    background-color: rgb(0, 217, 255);
+    color: white;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h6 {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
