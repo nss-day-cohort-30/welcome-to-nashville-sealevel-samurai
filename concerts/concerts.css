@@ -1,8 +1,3 @@
-/* body {
-    background-color: whitesmoke;
-    color: blue;
-}
-
 .image {
     display: flex;
     height: auto;
@@ -10,7 +5,7 @@
 } */
 /* Dropdown */
 
-.concertssDropdownChecklist, .concertsFeatures {
+.concertsDropdownChecklist, .concertsFeatures {
     font-size: 1.4em;
 }
 
@@ -20,7 +15,7 @@
     background-color: rgb(0, 217, 255);
 }
 
-.concertsDropdownChecklist .anchor {
+.concertsDropdownChecklist .concertAnchor {
     position: relative;
     cursor: pointer;
     display: inline-block;
@@ -28,7 +23,7 @@
     border: 1px solid #ccc;
 }
 
-.concertsDropdownChecklist .anchor:after {
+.concertsDropdownChecklist .concertAnchor:after {
     position: absolute;
     content: "";
     border-left: 2px solid white;
@@ -43,7 +38,7 @@
     transform: rotate(-135deg);
 }
 
-.concertsDropdownChecklist .anchor:active:after {
+.concertsDropdownChecklist .concertAnchor:active:after {
     right: 8px;
     top: 21%;
 }
