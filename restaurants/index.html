@@ -128,36 +128,17 @@
         <!-- meetups input section -->
         <section id="meetups" class="searchField">
             <h2 id="meetupsSearchHeader" class="searchSectionHeader">Find a meetup:</h2>
-            <input id = "searchTerms" type="text">
-            <button id="input">submit</button>
+            <button id="submitButton">Submit</button>
+            <input id="foodSearch">
+            <div id="putHere">"food"</div>
 
         </section>
 
         <!-- concerts input section -->
-        <section id="concerts	" class="searchField">
-            <h2 id="concertSearchHeader" class="searchSectionHeader">Find a Concert:</h2>
+        <section id="concerts" class="searchField">
+            <h2 id="concertsSearchHeader" class="searchSectionHeader">Find a concert:</h2>
 
-            <div id="concertFeaturesList" class="concertDropdownChecklist" tabindex="">
-                <span class="anchor">--Select desired concert genre: --</span>
-                <ul class="items">
-                    <li>
-                        <input id="Country" class="concertGenre" type="checkbox" />Country
-                    </li>
-                    <li>
-                        <input id="Rock" class="concertGenre" type="checkbox" />Rock
-                    </li>
-                    <li>
-                        <input id="R&B" class="concertGenre" type="checkbox" />R&B
-                    </li>
-                    <li>
-                        <input id="Other" class="concertGenre" type="checkbox" />Other
-                    </li>
 
-                </ul>
-            </div>
-            <div>
-                <button id="concertSearchButton">Search Concerts!</button>
-            </div>
         </section>
     </div>
 
@@ -185,7 +166,7 @@
         <!-- meetups search results -->
         <section id="meetupsSearchResults" class="resultsField">
             <h2 id="meetupsResultsHeader" class="resultsSectionHeader">Matching Meetups:</h2>
-            <section id="meetUpsThatWork" class="resultsList">
+            <section class="resultsList">
 
             </section>
 
@@ -227,7 +208,6 @@
     <script src="parks/parks.js"></script>
     <script src="restaurants/restaurans.js"></script>
     <script src="scripts.js"></script>
-    >>>>>>> 6f5ed58e07eb72c69453dd9ad1499187fd6e6ad3
 </body>
 
 </html>
