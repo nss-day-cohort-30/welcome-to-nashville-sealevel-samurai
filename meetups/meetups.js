@@ -17,14 +17,16 @@ let getSearchTerms = () => {
             console.log(results.events)
             let meetUps = results.events
             // console.log(typeof meetUps)
-            if(meetUpsThatWork.hasChildNodes()) {
+            if (meetUpsThatWork.hasChildNodes()) {
                 meetUpsThatWork.innerHTML = ""
             }
+            //loops through the meetups and displays in results
             meetUps.forEach(meetUp => {
                 let name = meetUp.name.text
                 let url = meetUp.url
                 console.log(name)
                 let htmlBuilder = meetUpsThatWork.innerHTML +=
+                    //builds the html
                     `
                     <div>
                     <a href=${url} target="_blank">${name}</a>
@@ -37,27 +39,22 @@ let getSearchTerms = () => {
 
 
 
-    // .push(myUrlSearch))
-    // .then(addHtmlToDom(myUrlSearch))
-    // .then(console.log(makeUrl))
+
 
 }
-// console.log(results)
-//builds the html
+
 
 //adds html to dom
 const addHtmlToDom = (htmlBuilder) => {
     let meetupResults = document.getElementById("meetUpsThatWork")
     meetupResults.innerHTML += htmlElement
 }
-// let saveMeetUp = () => {
-//     document.querySelector("meetUpSearchResults")
-// }
+
 
 //listens for the button
 document.getElementById("meetUpInput").addEventListener("click", getSearchTerms)
-
-document.getElementById("meetupsSearchResults").addEventListener("click", function(event) {
+//puts the saved result into itinerary
+document.getElementById("meetupsSearchResults").addEventListener("click", function (event) {
     if (event.target.nodeName === "BUTTON") {
         let selectedResult = event.target.previousSibling.previousSibling.cloneNode(true)
         savedMeetupDiv.innerHTML = ""
