@@ -1,0 +1,10 @@
+body {
+    background-color: whitesmoke;
+    color: blue;
+}
+
+.image {
+    display: flex;
+    height: auto;
+    width: 500px;
+}
