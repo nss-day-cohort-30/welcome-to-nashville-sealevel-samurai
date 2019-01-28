@@ -1,7 +1,7 @@
 // let events = []
 const listEl = document.getElementById("eventList")
 
-
+// Fetch data from API
 fetch("https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=312&apikey=1IOrDckSKm979mY3YBxYLuqcNhgSUD26")
 .then(response => response.json())
 .then(myParsedEvents => {
