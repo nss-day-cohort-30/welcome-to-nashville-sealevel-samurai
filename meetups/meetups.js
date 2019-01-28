@@ -33,7 +33,6 @@ let getSearchTerms = () => {
                     <div>
                     <button id="save-${url}">Save Event</button>
                     </div>
-                    </div>
                     `
                 // console.log(results.name)
             });
@@ -58,7 +57,7 @@ document.getElementById("meetUpInput").addEventListener("click", getSearchTerms)
 //puts the saved result into itinerary
 document.getElementById("meetupsSearchResults").addEventListener("click", function (event) {
     if (event.target.nodeName === "BUTTON") {
-        let selectedResult = event.target.previousSibling.previousSibling.cloneNode(true)
+        let selectedResult = event.target.parentNode.previousSibling.previousSibling.cloneNode(true)
         savedMeetupDiv.innerHTML = ""
         savedMeetupDiv.appendChild(selectedResult)
     }
