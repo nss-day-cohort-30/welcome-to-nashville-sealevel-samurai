@@ -1,7 +1,7 @@
 // let events = []
 const listEl = document.getElementById("eventList")
 
-
+// Fetch data from API
 fetch("https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=312&apikey=1IOrDckSKm979mY3YBxYLuqcNhgSUD26")
 .then(response => response.json())
 .then(myParsedEvents => {
@@ -20,7 +20,7 @@ fetch("https://app.ticketmaster.com/discovery/v2/events.json?classificationName=
     <p>${genre}</p>
     <img src="${image}" class="image">
     `
-    listEl.innerHTML+=eventCard
+    // listEl.innerHTML+=eventCard
     // console.log(artist)
     // console.log(venue)
     // console.log(date)
@@ -29,6 +29,14 @@ fetch("https://app.ticketmaster.com/discovery/v2/events.json?classificationName=
     // console.log(image)
   }
 })
-
 // console.log(listEl)
 // const addEventToDom = artist => listEl.innerHTML += artist
+
+ // Defines the dropdown list as dropdown
+ let concertDropdown = document.querySelector("#concertGenresList");
+ // Creates a function that expands or collapses the dropdown;
+ executeConcertDropdown = function () {
+     concertDropdown.classList.toggle("visible")
+ }
+ // Adds executeDropdown to "select desired features" bar
+ document.querySelector(".concertAnchor").addEventListener("click", executeConcertDropdown) 
