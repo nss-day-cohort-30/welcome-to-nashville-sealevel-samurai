@@ -17,7 +17,7 @@ $('#cmd').click(function () {
         'width': 170,
             'elementHandlers': specialElementHandlers
     });
-    doc.save('sample-file.pdf');
+    doc.save('Itninerary.pdf');
     console.log("hi!")
 });
 
