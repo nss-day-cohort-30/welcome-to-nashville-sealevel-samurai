@@ -12,7 +12,7 @@ fetch("https://app.ticketmaster.com/discovery/v2/events.json?classificationName=
     let date = myParsedEvents._embedded.events[i].dates.start.localDate
     let time = myParsedEvents._embedded.events[i].dates.start.localTime
     let genre = myParsedEvents._embedded.events[i].classifications[0].genre.name
-    let image = myParsedEvents._embedded.events[i].images[3].url
+    let image = myParsedEvents._embedded.events[i].images[2].url
     let eventCard = `
     <h1>${artist}</h1>
     <h2>${venue}</h2>
