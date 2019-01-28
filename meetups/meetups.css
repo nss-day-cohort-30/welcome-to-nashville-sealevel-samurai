@@ -14,10 +14,17 @@
     font-size: 1.7em;
 }
 
-input {
-    width: 250px;
+#meetUpsearchTerms {
+    display: flex;
+    position: relative;
+    left: 20px;
+    width: 260px;
 }
 
+
+a {
+    color:white;
+}
 /* #meetups {
     display: flex;
     justify-content: space-between;
