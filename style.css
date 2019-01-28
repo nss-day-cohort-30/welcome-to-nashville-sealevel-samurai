@@ -59,7 +59,8 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin: 10px 0px 0px 0px
+    margin: 10px 0px 0px 0px;
+    
 }
 .resultsField {
     /* border: 3px dotted rgb(236, 76, 1); */
@@ -68,6 +69,7 @@ body {
     height: 400px;
     width: 48%;
     margin: 5px 0px;
+    border-bottom: 3px solid rgb(236, 76, 1);
 }
 
 .resultsSectionHeader {
