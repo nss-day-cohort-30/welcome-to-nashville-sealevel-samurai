@@ -1,6 +1,8 @@
-section {
+#meetupsSearchResults {
     display:flex;
     flex-direction: column;
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #meetUpInput {
@@ -11,3 +13,19 @@ section {
     color: white;
     font-size: 1.7em;
 }
+
+#meetUpsearchTerms {
+    display: flex;
+    position: relative;
+    left: 20px;
+    width: 260px;
+}
+
+
+a {
+    color:white;
+}
+/* #meetups {
+    display: flex;
+    justify-content: space-between;
+} */

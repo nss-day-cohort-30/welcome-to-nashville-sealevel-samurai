@@ -7,7 +7,7 @@ const meetupDiv = document.getElementById("savedMeetupDiv")
 let myUrlSearch = ""
 //gets the custom search
 let getSearchTerms = () => {
-    myUrlSearch = document.getElementById("searchTerms").value
+    myUrlSearch = document.getElementById("meetUpsearchTerms").value
 
     //gets the api
     let makeUrl = eventUrl.concat(myUrlSearch).concat(eventToken)
