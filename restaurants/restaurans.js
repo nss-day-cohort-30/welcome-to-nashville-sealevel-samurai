@@ -1,7 +1,7 @@
 
     let arrayOfResturants = []
-    let restSearchField = document.getElementById("foodSearch")
-    restSearchField.innerHTML = `--Your search could be whatever--`
+    // let restSearchField = document.getElementById("foodSearch")
+    // restSearchField.innerHTML = `--Your search could be whatever--`
     
     // foodType = prompt("What are you looking for?")
     let textArea = document.getElementById("foodSearch");
