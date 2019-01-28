@@ -5,15 +5,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Welcome to Nashville!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <button id="submitButton">Submit</button>
-    <input id="foodSearch">
-    <div id="putHere">"food"</div>
+    <section class="hero">
+        <div id="teamName">Sealevel Samurai</div>
+        <h1 id="heroTitle">Welcome To...</h1>
+    </section>
 
-    <script src="/restaurants/restaurans.js"></script>
+    <!-- instructions on how to use page -->
+    <section id="instructions">Search for stuff to do while in Nashville! Follow the directions below, find the
+        activities you like, and save them to your trip itinerary!</section>
+
+    <div id="searchFields">
+        <!-- parks input section -->
+        <section id="parks" class="searchField">
+            <h2 id="parkSearchHeader" class="searchSectionHeader">Find a Park:</h2>
+
+            <div id="parkFeaturesList" class="parksDropdownChecklist" tabindex="">
+                <span class="anchor">--Select desired park features: --</span>
+                <ul class="items">
+                    <li>
+                        <input id="community_center" class="parkFeature" type="checkbox" />Community Center
+                    </li>
+                    <li>
+                        <input id="nature_center" class="parkFeature" type="checkbox" />Nature Center
+                    </li>
+                    <li>
+                        <input id="playground" class="parkFeature" type="checkbox" />Playground
+                    </li>
+                    <li>
+                        <input id="ada_accessible" class="parkFeature" type="checkbox" />ADA Accessbile
+                    </li>
+                    <li>
+                        <input id="restrooms_available" class="parkFeature" type="checkbox" />Restrooms Available
+                    </li>
+                    <li>
+                        <input id="picnic_shelters" class="parkFeature" type="checkbox" />Picnic Shelters
+                    </li>
+                    <li>
+                        <input id="dog_park" class="parkFeature" type="checkbox" />Dog Park
+                    </li>
+                    <li>
+                        <input id="baseball_fields" class="parkFeature" type="checkbox" />Baseball Fields
+                    </li>
+                    <li>
+                        <input id="basketball_courts" class="parkFeature" type="checkbox" />Basketball Courts
+                    </li>
+                    <li>
+                        <input id="volleyball" class="parkFeature" type="checkbox" />Volleyball
+                    </li>
+                    <li>
+                        <input id="soccer_fields" class="parkFeature" type="checkbox" />Soccer Fields
+                    </li>
+                    <li>
+                        <input id="football_multi_purpose_fields" class="parkFeature" type="checkbox" />Football/Multi
+                        Purpose Fields
+                    </li>
+                    <li>
+                        <input id="tennis_courts" class="parkFeature" type="checkbox" />Tennis Courts
+                    </li>
+                    <li>
+                        <input id="disc_golf" class="parkFeature" type="checkbox" />Disc Golf
+                    </li>
+                    <li>
+                        <input id="skate_park" class="parkFeature" type="checkbox" />Skate Park
+                    </li>
+                    <li>
+                        <input id="swimming_pool" class="parkFeature" type="checkbox" />Swimming Pool
+                    </li>
+                    <li>
+                        <input id="spray_park" class="parkFeature" type="checkbox" />Spray Park
+                    </li>
+                    <li>
+                        <input id="golf_course" class="parkFeature" type="checkbox" />Golf Course
+                    </li>
+                    <li>
+                        <input id="walk_jog_paths" class="parkFeature" type="checkbox" />Walking/Jogging Paths
+                    </li>
+                    <li>
+                        <input id="hiking_trails" class="parkFeature" type="checkbox" />Hiking Trails
+                    </li>
+                    <li>
+                        <input id="horse_trails" class="parkFeature" type="checkbox" />Horse Trails
+                    </li>
+                    <li>
+                        <input id="mountain_bike_trails" class="parkFeature" type="checkbox" />Mountain Bike Trails
+                    </li>
+                    <li>
+                        <input id="boat_launch" class="parkFeature" type="checkbox" />Boat Launch
+                    </li>
+                    <li>
+                        <input id="camping_available_by_permit" class="parkFeature" type="checkbox" />Camping Available
+                    </li>
+                    <li>
+                        <input id="fishing_by_permit" class="parkFeature" type="checkbox" />Fishing
+                    </li>
+                    <li>
+                        <input id="lake" class="parkFeature" type="checkbox" />Lake
+                    </li>
+                    <li>
+                        <input id="canoe_launch" class="parkFeature" type="checkbox" />Canoe Launch
+                    </li>
+                    <li>
+                        <input id="community_garden" class="parkFeature" type="checkbox" />Community Garden
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <button id="parkSearchButton">Search Parks!</button>
+            </div>
+        </section>
+
+        <!-- restaurants input section -->
+        <section id="restaurants" class="searchField">
+            <h2 id="restaurantSearchHeader" class="searchSectionHeader">Find a restaurant:</h2>
+
+        </section>
+
+        <!-- meetups input section -->
+        <section id="meetups" class="searchField">
+            <h2 id="meetupsSearchHeader" class="searchSectionHeader">Find a meetup:</h2>
+            <button id="submitButton">Submit</button>
+            <input id="foodSearch">
+            <div id="putHere">"food"</div>
+
+        </section>
+
+        <!-- concerts input section -->
+        <section id="concerts" class="searchField">
+            <h2 id="concertsSearchHeader" class="searchSectionHeader">Find a concert:</h2>
+
+
+        </section>
+    </div>
+
+
+    <div id="searchResultsFields">
+        <!-- parks search results -->
+        <section id="parksSearchResults" class="resultsField">
+            <h2 id="parksResultsHeader" class="resultsSectionHeader">Matching Parks:</h2>
+            <div>
+                <section id="parksThatMatch" class="resultsList">
+
+                </section>
+            </div>
+        </section>
+
+        <!-- restaurants search results -->
+        <section id="restaurantsSearchResults" class="resultsField">
+            <h2 id="restaurantsResultsHeader" class="resultsSectionHeader">Matching Restaurans:</h2>
+            <section class="resultsList" id="resturantResultsDisplay">
+
+            </section>
+
+        </section>
+
+        <!-- meetups search results -->
+        <section id="meetupsSearchResults" class="resultsField">
+            <h2 id="meetupsResultsHeader" class="resultsSectionHeader">Matching Meetups:</h2>
+            <section class="resultsList">
+
+            </section>
+
+        </section>
+
+        <!-- concerts search results -->
+        <section id="concertsSearchResults" class="resultsField">
+            <h2 id="concertsResultsHeader" class="resultsSectionHeader">Matching Concerts:</h2>
+            <section class="resultsList">
+
+            </section>
+        </section>
+    </div>
+
+
+
+    <div id="savedItinerary">
+        <h2>Here is your itinerary for the day!</h2>
+        <section id="savedPark" class="savedItem">Park:</section>
+        <div id="savedParkDiv" class="savedItemDiv"></div>
+        <section id="savedRestaurant" class="savedItem">Restaurant:</section>
+        <div id="savedRestaurantDiv" class="savedItemDiv"></div>
+        <section id="savedMeetup" class="savedItem">Meetup:</section>
+        <div id="savedMeetupDiv" class="savedItemDiv"></div>
+        <section id="savedConcert" class="savedItem">Concert:</section>
+        <div id="savedConcertDiv" class="savedItemDiv"></div>
+
+
+
+    </div>
+
+    <footer id="footer" class="footer">
+        <h3>2019 Sealevel Samurai</h3>
+        <h6>Hero photo by Katy Belcher on Unsplash</h6>
+    </footer>
+
+    <script src="concerts/concerts.js"></script>
+    <script src="meetups/meetups.js"></script>
+    <script src="parks/parks.js"></script>
+    <script src="restaurants/restaurans.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
