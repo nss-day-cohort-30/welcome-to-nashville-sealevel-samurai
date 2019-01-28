@@ -86,10 +86,6 @@ saveParkToItinerary = function (event) {
         <div>${parkNodeList[3].textContent}</div>
         `
         document.querySelector("#savedParkDiv").innerHTML = itineraryParkHTML;
-
-
-
-
     }
 }
 
