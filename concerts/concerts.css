@@ -7,10 +7,9 @@
 .concertInfo {
     display: flex;
     flex-direction: row;
-    margin: 125px 0px;
-    align-content: 10px;
-    height: 250px;
+    height: 220px;
 }
+
 /* Dropdown */
 
 .concertsDropdownChecklist, .concertsFeatures {
