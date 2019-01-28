@@ -1,6 +1,9 @@
 @import url("hero.css");
 @import url("parks/parks.css");
+@import url("meetups/meetups.css");
+@import url("restaurants/restaurants.css");
 @import url("concerts/concerts.css");
+
 
 * {
     margin: 0px;
@@ -139,4 +142,8 @@ footer h6 {
     position: fixed;
     bottom: 10px;
     right: 10px;
+}
+
+.restSearchDisplay {
+    margin-bottom: 10px;
 }
