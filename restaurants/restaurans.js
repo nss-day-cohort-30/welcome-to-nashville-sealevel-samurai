@@ -1,5 +1,7 @@
 
     let arrayOfResturants = []
+    let restSearchField = document.getElementById("foodSearch")
+    restSearchField.innerHTML = `--Your search could be whatever--`
     
     // foodType = prompt("What are you looking for?")
     let textArea = document.getElementById("foodSearch");
@@ -31,7 +33,7 @@
                 <h2>${name}</h2>
                 <h3>Type: ${type}</h3>
                 <p> Cost: $${cost} for two people | Rating: ${rating} | Location: ${location}</p>
-                <p> Address: ${address} </p>
+                <p> ${address} </p>
                 <button id="save--${name}">Save this resturant</button>
                 <br>
                 </div>
@@ -58,7 +60,7 @@
         })
     }
 
-    document.getElementById("submitButton").addEventListener("click", foodSearcher)
+    document.getElementById("restaurantSearchButton").addEventListener("click", foodSearcher)
 
 
     saveRestToItinerary = function (event) {
