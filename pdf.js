@@ -17,7 +17,7 @@ $('#cmd').click(function () {
         'width': 170,
             'elementHandlers': specialElementHandlers
     });
-    doc.save('Itninerary.pdf');
+    doc.save('Itinerary.pdf');
     console.log("hi!")
 });
 
