@@ -30,7 +30,9 @@ let getSearchTerms = () => {
                     `
                     <div>
                     <a href=${url} target="_blank">${name}</a>
+                    <div>
                     <button id="save-${url}">Save Event</button>
+                    </div>
                     </div>
                     `
                 // console.log(results.name)
