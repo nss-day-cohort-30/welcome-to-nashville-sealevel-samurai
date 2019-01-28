@@ -15,16 +15,16 @@ let getSearchTerms = () => {
         .then(results => {
             console.log(results.events)
             let meetUps = results.events
-            console.log(typeof meetUps)
+            // console.log(typeof meetUps)
             meetUps.forEach(meetUp => {
                 let name = meetUp.name.text
                 console.log(name)
-                let htmlBuilder = () => {
-                    return `
-                    <p>${results.events.name.text}<p>
-                    `}
+            let htmlBuilder = apiResults.innerHTML +=
+                    `
+                    <p>${name}<p>
+                    `
                     
-                    console.log(results.name)
+                    // console.log(results.name)
         });})
 
 
